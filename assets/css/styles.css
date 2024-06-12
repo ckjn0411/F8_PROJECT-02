@@ -21,6 +21,7 @@ body {
 a {
   text-decoration: none;
 }
+
 .main-content {
   width: 1170px;
   min-width: calc(100%-48px);
@@ -43,6 +44,43 @@ a {
 
 .btn:hover {
   opacity: 0.8;
+  cursor: pointer;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #171100;
+}
+
+.heading.lv1 {
+  font-size: 5.8rem;
+  line-height: 1.17;
+}
+
+.heading.lv2 {
+  font-size: 3.8rem;
+  line-height: 1.26;
+}
+
+.desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  font-weight: 400;
+  color: #5f5b53;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
 }
 /*--------Header-------- */
 .header {
@@ -191,23 +229,6 @@ a {
   padding-left: 130px;
 }
 
-.hero .heading {
-  font-family: var(--font-heading);
-  font-size: 5.8rem;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: -0.02em;
-  color: #171100;
-}
-
-.hero .desc {
-  margin-top: 22px;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 30px;
-  color: #5f5b53;
-}
-
 .hero .cta-group {
   display: flex;
   align-items: center;
@@ -263,4 +284,118 @@ a {
 
 .hero .stats strong:first-child {
   padding-left: 0;
+}
+
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.popular-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+}
+
+.popular-top .control {
+  display: flex;
+  gap: 18px;
+}
+
+.popular-top .control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background: transparent;
+}
+
+.popular-top .control-btn:hover {
+  color: white;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.popular .course-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.popular .course-item {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+}
+
+.popular .course-item:hover {
+  border-color: transparent;
+  box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+.popular .course-item .thumb {
+  width: calc(100% + 2px);
+  height: 278px;
+  margin: -1px;
+  object-fit: cover;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+.popular .course-item .rating,
+.popular .course-item .foot,
+.popular .course-item .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular .course-item .title a {
+  padding-right: 6px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.popular .rating .value {
+  margin-left: 6px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 28px;
+  color: #fea31b;
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+  line-height: 1.86;
+}
+
+.popular .course-item .foot {
+  margin-top: 12px;
+}
+
+.popular .course-item .price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.popular .course-item .book-btn {
+  border: none;
+}
+
+.popular .course-item .book-btn:hover {
+  color: #fff;
+  background-color: var(--primary-color);
 }
